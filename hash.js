@@ -58,6 +58,10 @@ function hashMap() {
         }
     }
 
+    function keys() {
+        return keyArray = this.hashMap.filter((entry) => entry !== undefined)
+    }
+
     return {
         hashMap,
         hash,
@@ -67,6 +71,7 @@ function hashMap() {
         remove,
         length,
         clear,
+        keys,
     }
 }
 
@@ -94,6 +99,7 @@ h.set(h.hash('h'), 'h');
 // h.set(h.hash('p'), 'p');
 // h.set(h.hash('q'), 'q');
 // console.log(h.length());
-// console.log(h.remove(1));
+console.log(h.remove(1));
 // console.log(h.clear());
+console.log(h.keys());
 console.log(h.hashMap);
